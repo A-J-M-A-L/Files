@@ -2,7 +2,7 @@ let limit = 1024
 let fetch = require('node-fetch')
 const { servers, ytv } = require('../lib/y2mate')
 let handler = async (m, { conn, args, isPrems, isOwner }) => {
-  if (!args || !args[0]) throw 'Uhm... urlnya mana?'
+  if (!args || !args[0]) throw 'Uhm... where is the url?'
   let chat = global.db.data.chats[m.chat]
   let server = (args[1] || servers[0]).toLowerCase()
   let { dl_link, thumb, title, filesize, filesizeF} = await ytv(args[0], servers.includes(server) ? server : servers[0])
@@ -10,7 +10,7 @@ let handler = async (m, { conn, args, isPrems, isOwner }) => {
   conn.sendFile(m.chat, thumb, 'thumbnail.jpg', `
 *Title:* ${title}
 *Filesize:* ${filesizeF}
-*${isLimit ? 'Pakai ': ''}Link:* ${dl_link}
+*${isLimit ? 'Use ': ''}Link:* ${dl_link}
 `.trim(), m)
   let _thumb = {}
   try { _thumb = { thumbnail: await (await fetch(thumb)).buffer() } }
@@ -43,10 +43,10 @@ module.exports = handler
 
 /*let xfar = require('xfarr-api')
 let fetch = require('node-fetch')
-let handler = async (m, { conn, command, text }) => {
-    if (!text) throw 'Masukkan Link\n\nContoh: .ytmp4 https://youtube.com/xxxxxx'
+let handler = async(m, { conn, command, text }) => {
+    if (!text) throw 'Enter Link\n\nExample: .ytmp4 https://youtube.com/xxxxxx'
   let res = await xfar.Youtube(text)
-m.reply('*Tunggu Sebentar...*')
+m.reply('*Wait a moment...*')
 conn.sendFile(m.chat,res.medias[2].url, 'audio.mp3', `Youtube Downloader
 360p`, m)
 
@@ -56,5 +56,4 @@ handler.tags = ['downloader']
 handler.command = /^ytmp4$/i
 
 
-module.exports = handler*/
-
+module.exports = handlers*/
