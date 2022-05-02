@@ -1,13 +1,13 @@
 let handler = async(m, { conn, text, participants }) => {
-  let teks = `⋙ *Pesan dari Admin Group* ⋘
+  let text = `⋙ *Message from Group Admin*
 \n *${text ? text : 'Nothing'}*\n\n`
-		      	for (let mem of participants) {
-		            teks += ` @${mem.id.split('@')[0]}\n`
-				}
-                teks += `\nbukan elyas`
-                conn.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, )
+for (let mem of participants) {
+text += ` @${mem.id.split('@')[0]}\n`
 }
-handler.help = ['tagall <pesan>']
+                text += `\nnot wizard`
+                conn.sendMessage(m.chat, { text: text, mentions: participants.map(a => a.id) }, )
+}
+handler.help = ['tagall <message>']
 handler.tags = ['group']
 handler.command = /^(tagall)$/i
 
