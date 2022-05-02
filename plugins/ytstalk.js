@@ -2,7 +2,7 @@ let fetch = require('node-fetch')
 
 let handler = async(m, { conn, text }) => {
 
-  if (!text) return conn.reply(m.chat, 'Harap Masukan Nama channel', m)
+  if (!text) return conn.reply(m.chat, 'Please enter channel name', m)
 
   await m.reply('Searching...')
     let res = await fetch(`https://x-restapi.herokuapp.com/api/yt-stalk?username=${text}&apikey=BETA`)
@@ -14,9 +14,9 @@ let handler = async(m, { conn, text }) => {
 
 ▢ *Nama*: ${json.channel}
 ▢ *Subscriber*: ${json.subscriberCount}
-▢ *Verivikasi*: ${json.isVerified}
+▢ *Verified*: ${json.isVerified}
 ▢ *Link*: ${json.link}
-▢ *Deskripsi*: ${json.description}
+▢ *Description*: ${json.description}
 `
 
     conn.sendFile(m.chat, thumb, 'ytstalk.jpg', hasil, m)
