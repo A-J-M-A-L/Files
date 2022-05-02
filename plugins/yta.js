@@ -12,9 +12,9 @@ let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) =
 ┏┉━━━━━━━━━━━❏
 ┆ *YOUTUBE MP3*
 ├┈┈┈┈┈┈┈┈┈┈┈
-┆• *Judul:* ${title}
+┆• *Title:* ${title}
 │• *Type:* MP3
-┆• *📥 Ukuran File:* ${filesizeF}
+┆• *📥 File Size:* ${filesizeF}
 └❏
 `.trim(), m, null, {
     asDocument: chat.useDocument, mimetype: 'audio/mp4', ptt: true, contextInfo: {
@@ -23,7 +23,7 @@ let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) =
             body: 'Now Playing...',
             description: 'Now Playing...',
             mediaType: 2,
-          thumbnail: await (await fetch('https://telegra.ph/file/76f08bd0aeb06c3e0c0d5.jpg')).buffer(),
+          thumbnail: await (await fetch('https://telegra.ph/file/7d9d70dddf6cdef3dd6b3.jpg')).buffer(),
          mediaUrl: `https://youtube.com/watch?v=uIedYGN3NQQ`
         }
      }
