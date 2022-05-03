@@ -6,7 +6,7 @@ let handler = async (m) => {
     else who = m.sender
     let user = global.db.data.users[who]
 let anu =`
-─────〔 *Motivasi* 〕─────
+─────〔 *Motivation* 〕─────
 
 ${pickRandom(global.motivasi)}
 `
@@ -16,20 +16,20 @@ ${pickRandom(global.motivasi)}
 
          hydratedTemplate: {
            hydratedContentText: anu,
-           locationMessage: { 
+           ImageMessage: { 
            jpegThumbnail: fs.readFileSync('./media/quotes.jpg') }, 
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: '📍instagram',
-               url: instagram
+               displayText: '📍 YouTube',
+               url: youtube
              }
 
            },
                {
            quickReplyButton: {
-               displayText: 'Motivasi',
-               id: '.motivasi',
+               displayText: 'Next',
+               id: '.motivation',
              }
 
            }]
@@ -43,9 +43,9 @@ ${pickRandom(global.motivasi)}
          { messageId: template.key.id }
      )
 }
-handler.help = ['motivasi']
+handler.help = ['motivation']
 handler.tags = ['quotes']
-handler.command = /^(motivasi)$/i
+handler.command = /^(motivation)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
@@ -65,55 +65,54 @@ function pickRandom(list) {
 }
 
 global.motivasi = [
-"Jangan bicara, bertindak saja. Jangan katakan, tunjukkan saja. Jangan janji, buktikan saja.",
-"Jangan pernah berhenti melakukan yang terbaik hanya karena seseorang tidak memberi Anda penghargaan.",
-"Bekerja saat mereka tidur. Belajar saat mereka berpesta. Hemat sementara mereka menghabiskan. Hiduplah seperti mimpi mereka.",
-"Kunci sukses adalah memusatkan pikiran sadar kita pada hal-hal yang kita inginkan, bukan hal-hal yang kita takuti.",
-"Jangan takut gagal. Ketakutan berada di tempat yang sama tahun depan seperti Anda saat ini.",
-"Jika kita terus melakukan apa yang kita lakukan, kita akan terus mendapatkan apa yang kita dapatkan.",
-"Jika Anda tidak dapat mengatasi stres, Anda tidak akan mengelola kesuksesan.",
-"Bersikap keras kepala tentang tujuan Anda dan fleksibel tentang metode Anda.",
-"Kerja keras mengalahkan bakat ketika bakat tidak bekerja keras.",
-"Ingatlah bahwa pelajaran terbesar dalam hidup biasanya dipelajari dari saat-saat terburuk dan dari kesalahan terburuk.",
-"Hidup bukan tentang menunggu badai berlalu, tetapi belajar menari di tengah hujan.",
-"Jika rencananya tidak berhasil, ubah rencananya bukan tujuannya.",
-"Jangan takut kalau hidupmu akan berakhir; takutlah kalau hidupmu tak pernah dimulai.",
-"Orang yang benar-benar hebat adalah orang yang membuat setiap orang merasa hebat.",
-"Pengalaman adalah guru yang berat karena dia memberikan tes terlebih dahulu, kemudian pelajarannya.",
-"Mengetahui seberapa banyak yang perlu diketahui adalah awal dari belajar untuk hidup.",
-"Sukses bukanlah akhir, kegagalan tidak fatal. Yang terpenting adalah keberanian untuk melanjutkan.",
-"Lebih baik gagal dalam orisinalitas daripada berhasil meniru.",
-"Berani bermimpi, tapi yang lebih penting, berani melakukan tindakan di balik impianmu.",
-"Tetapkan tujuan Anda tinggi-tinggi, dan jangan berhenti sampai Anda mencapainya.",
-"Kembangkan kesuksesan dari kegagalan. Keputusasaan dan kegagalan adalah dua batu loncatan paling pasti menuju sukses.",
-"Jenius adalah satu persen inspirasi dan sembilan puluh sembilan persen keringat.",
-"Sukses adalah tempat persiapan dan kesempatan bertemu.",
-"Ketekunan gagal 19 kali dan berhasil pada kesempatam yang ke-20.",
-"Jalan menuju sukses dan jalan menuju kegagalan hampir persis sama.",
-"Sukses biasanya datang kepada mereka yang terlalu sibuk mencarinya.",
-"Jangan tunda pekerjaanmu sampai besok, sementara kau bisa mengerjakannya hari ini.",
-"20 tahun dari sekarang, kau mungkin lebih kecewa dengan hal-hal yang tidak sempat kau lakukan alih-alih yang sudah.",
-"Jangan habiskan waktumu memukuli tembok dan berharap bisa mengubahnya menjadi pintu.",
-"Kesempatan itu mirip seperti matahari terbit. Kalau kau menunggu terlalu lama, kau bisa melewatkannya.",
-"Hidup ini terdiri dari 10 persen apa yang terjadi padamu dan 90 persen bagaimana caramu menyikapinya.",
-"Ada tiga cara untuk mencapai kesuksesan tertinggi: Cara pertama adalah bersikap baik. Cara kedua adalah bersikap baik. Cara ketiga adalah menjadi baik.",
-"Alasan nomor satu orang gagal dalam hidup adalah karena mereka mendengarkan teman, keluarga, dan tetangga mereka.",
-"Waktu lebih berharga daripada uang. Kamu bisa mendapatkan lebih banyak uang, tetapi kamu tidak bisa mendapatkan lebih banyak waktu.",
-"Penetapan tujuan adalah rahasia masa depan yang menarik.",
-"Saat kita berusaha untuk menjadi lebih baik dari kita, segala sesuatu di sekitar kita juga menjadi lebih baik.",
-"Pertumbuhan dimulai ketika kita mulai menerima kelemahan kita sendiri.",
-"Janganlah pernah menyerah ketika Anda masih mampu berusaha lagi. Tidak ada kata berakhir sampai Anda berhenti mencoba.",
-"Kemauan adalah kunci sukses. Orang-orang sukses, berusaha keras apa pun yang mereka rasakan dengan menerapkan keinginan mereka untuk mengatasi sikap apatis, keraguan atau ketakutan.",
-"Janganlah pernah menyerah ketika Anda masih mampu berusaha lagi. Tidak ada kata berakhir sampai Anda berhenti mencoba.",
-"Kemauan adalah kunci sukses. Orang-orang sukses, berusaha keras apa pun yang mereka rasakan dengan menerapkan keinginan mereka untuk mengatasi sikap apatis, keraguan atau ketakutan.",
-"Hal pertama yang dilakukan orang sukses adalah memandang kegagalan sebagai sinyal positif untuk sukses.",
-"Ciri khas orang sukses adalah mereka selalu berusaha keras untuk mempelajari hal-hal baru.",
-"Sukses adalah mendapatkan apa yang kamu inginkan, kebahagiaan menginginkan apa yang kamu dapatkan.",
-"Orang pesimis melihat kesulitan di setiap kesempatan. Orang yang optimis melihat peluang dalam setiap kesulitan.",
-"Keraguan membunuh lebih banyak mimpi daripada kegagalan.",
-"Lakukan apa yang harus kamu lakukan sampai kamu dapat melakukan apa yang ingin kamu lakukan.",
-"Optimistis adalah salah satu kualitas yang lebih terkait dengan kesuksesan dan kebahagiaan daripada yang lain.",
-"Penghargaan paling tinggi bagi seorang pekerja keras bukanlah apa yang dia peroleh dari pekerjaan itu, tapi seberapa berkembang ia dengan kerja kerasnya itu.",
-"Cara terbaik untuk memulai adalah dengan berhenti berbicara dan mulai melakukan.",
-"Kegagalan tidak akan pernah menyusul jika tekad untuk sukses cukup kuat."
+"Don't talk, just act. Don't say, just show. Don't promise, just prove it.",
+"Never stop doing your best just because someone doesn't reward you.",
+"Work while they sleep. Learn while they party. Save while they spend. Live like their dream.",
+"The key to success is to focus our conscious mind on the things we want, not the things we fear.",
+"Don't be afraid of failure. Fear of being in the same place next year as you are today.",
+"If we keep doing what we're doing, we'll keep getting what we got.",
+"If you can't handle stress, you won't manage success."
+"Be stubborn about your goals and flexible about your methods.",
+"Hard work beats talent when talent doesn't work hard."
+"Remember that the greatest lessons in life are usually learned from the worst times and from the worst mistakes.",
+"Life is not about waiting for the storm to pass, but learning to dance in the rain.",
+"If the plan doesn't work, change the plan not the goal.",
+"Don't be afraid that your life will end; be afraid that your life will never begin."
+"A truly great person is someone who makes everyone feel great.",
+"Experience is a tough teacher because it gives the tests first, then the lessons.",
+"Knowing how much to know is the beginning of learning to live.",
+"Success is not the end, failure is not fatal. What matters is the courage to continue.",
+"It is better to fail in originality than to succeed in imitation.",
+"Dare to dream, but more importantly, dare to take action behind your dreams.","Tetapkan tujuan Anda tinggi-tinggi, dan jangan berhenti sampai Anda mencapainya.",
+Cultivate success from failure. Despair and failure are the two surest stepping stones to success.",
+"Genius is one percent inspiration and ninety-nine percent perspiration.",
+"Success is where preparation and opportunity meet.",
+"Perseverance failed 19 times and succeeded on the 20th.",
+"The road to success and the road to failure are almost exactly the same.",
+"Success usually comes to those who are too busy looking for it.",
+"Don't put off your work until tomorrow, while you can do it today.",
+"20 years from now, you may be more disappointed by the things you didn't get to do than by the ones you did."
+"Don't spend your time beating walls and hoping to turn them into doors.",
+"Opportunities are like sunrises. If you wait too long, you may miss them.",
+"Life is 10 percent what happens to you and 90 percent how you react to it."
+"There are three ways to achieve ultimate success: The first way is to be kind. The second way is to be kind. The third way is to be kind.",
+"The number one reason people fail in life is because they listen to their friends, family and neighbors.",
+"Time is more valuable than money. You can earn more money, but you can't earn more time.",
+"Goal setting is the secret of an exciting future.",
+"When we strive to be better than we are, everything around us becomes better too.",
+"Growth begins when we begin to accept our own weaknesses.",
+"Never give up when you are still able to try again. It never ends until you stop trying.",
+"Willpower is the key to success. Successful people try hard no matter what they feel by applying their will to overcome apathy, doubt or fear.",
+"Never give up when you are still able to try again. It never ends until you stop trying.",
+"Willpower is the key to success. Successful people try hard no matter what they feel by applying their will to overcome apathy, doubt or fear.",
+"The first thing successful people do is view failure as a positive signal for success."
+"The hallmark of successful people is that they always try hard to learn new things.",
+"Success is getting what you want, happiness is wanting what you get.",
+"Pessimists see difficulty in every opportunity. Optimists see opportunity in every difficulty.",
+"Doubt kills more dreams than failure.",
+"Do what you have to do until you can do what you want to do.",
+"Optimism is one of the qualities that is more associated with success and happiness than any other.",
+"The highest reward for a hard worker is not what he gets from the job, but how much he develops with his hard work.",
+"The best way to start is to stop talking and start doing.",
+"Failure will never follow if the will to succeed is strong enough."
 ]
