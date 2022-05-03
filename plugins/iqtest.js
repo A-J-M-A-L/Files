@@ -1,4 +1,4 @@
-let handler  = async (m, { conn }) => {
+let handler = async (m, { conn }) => {
   conn.reply(m.chat,`${pickRandom(global.iq)}`, m)
 }
 handler.help = ['iqtest']
@@ -22,27 +22,27 @@ function pickRandom(list) {
 }
 
 global.iq = [
-'IQ Anda Sebesar : 1',
-'IQ Anda Sebesar : 14',
-'IQ Anda Sebesar : 23',
-'IQ Anda Sebesar : 35',
-'IQ Anda Sebesar : 41',
-'IQ Anda Sebesar : 50',
-'IQ Anda Sebesar : 67',
-'IQ Anda Sebesar : 72',
-'IQ Anda Sebesar : 86',
-'IQ Anda Sebesar : 99',
-'IQ Anda Sebesar : 150',
-'IQ Anda Sebesar : 340',
-'IQ Anda Sebesar : 423',
-'IQ Anda Sebesar : 500',
-'IQ Anda Sebesar : 676',
-'IQ Anda Sebesar : 780',
-'IQ Anda Sebesar : 812',
-'IQ Anda Sebesar : 945',
-'IQ Anda Sebesar : 1000',
-'IQ Anda Sebesar : Tidak Terbatas!',
-'IQ Anda Sebesar : 5000',
-'IQ Anda Sebesar : 7500',
-'IQ Anda Sebesar : 10000',
+'Your IQ is: 1',
+'Your IQ is: 14',
+'Your IQ is: 23',
+'Your IQ is : 35',
+'Your IQ is: 41',
+'Your IQ is: 50',
+'Your IQ is: 67',
+'Your IQ is: 72',
+'Your IQ is: 86',
+'Your IQ is: 99',
+'Your IQ is: 150',
+'Your IQ is : 340',
+'Your IQ is: 423',
+'Your IQ is: 500',
+'Your IQ is: 676',
+'Your IQ is : 780',
+'Your IQ is: 812',
+'Your IQ is: 945',
+'Your IQ is: 1000',
+'Your IQ is: Unlimited!',
+'Your IQ is : 5000',
+'Your IQ is : 7500',
+'Your IQ is: 10000',
 ]
