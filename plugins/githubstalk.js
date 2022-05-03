@@ -13,14 +13,14 @@ let handler = async(m, { conn, text }) => {
     let hasil = `*── 「 GITHUB STALK 」 ──*
 
 ➸ *Bio*: ${json.result.bio}
-➸ *Perusahaan*: ${json.result.company}
+➸ *Company*: ${json.result.company}
 ➸ *Email:* ${json.result.email}
 ➸ *Twitter:* ${json.result.twiter_username}
-➸ *Repo Publik:* ${json.result.public_repo}
-➸ *Gists Publik:* ${json.result.public_gists}
+➸ *Repo Public:* ${json.result.public_repo}
+➸ *Gists Public:* ${json.result.public_gists}
 ➸ *Follower:* ${json.result.follower}
 ➸ *Following:* ${json.result.following}
-➸ *Lokasi:* ${json.result.location}
+➸ *Location:* ${json.result.location}
 ➸ *Type:* ${json.result.Type}
 `
 
