@@ -6,7 +6,7 @@ let handler  = async (m, { conn }) => {
   ddd = await fetch('https://recoders-area.caliph.repl.co/api/fakta?apikey='+APIKeys["https://recoders-area.caliph.repl.co"])
   f = await ddd.json()
 let anu =`
-────〔 *Fakta Unik* 〕────
+*Unique Fact*
 
 ${f.result}
 `
@@ -14,20 +14,20 @@ ${f.result}
      templateMessage: {
          hydratedTemplate: {
            hydratedContentText: anu,
-           locationMessage: { 
-           jpegThumbnail: fs.readFileSync('./media/quotes.jpg') }, 
+           locationMessage: {
+           jpegThumbnail: fs.readFileSync('./media/quotes.jpg') },
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: '📍instagram',
-               url: instagram
+               displayText: 'YouTube♻️',
+               url: youtube
              }
 
            },
                {
              quickReplyButton: {
-               displayText: 'Fakta',
-               id: '.fakta',
+               displayText: 'Facts',
+               id: '.fact',
              }
 
            }]
@@ -40,10 +40,10 @@ ${f.result}
          template.message,
          { messageId: template.key.id }
      )
-} 
-handler.help = ['fakta unik']
+}
+handler.help = ['unique fact']
 handler.tags = ['internet']
-handler.command = /^(fakta|faktaunik)$/i
+handler.command = /^(fact|unique fact)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
