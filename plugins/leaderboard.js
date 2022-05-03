@@ -9,26 +9,26 @@ let handler = async (m, { conn, args, participants }) => {
   let usersLim = sortedLim.map(enumGetKey)
   let usersLevel = sortedLevel.map(enumGetKey)
   console.log(participants)
-  let len = args[0] && args[0].length > 0 ? Math.min(100, Math.max(parseInt(args[0]), 5)) : Math.min(5, sortedExp.length)
+  let len ​​= args[0] && args[0].length > 0 ? Math.min(100, Math.max(parseInt(args[0]), 5)) : Math.min(5, sortedExp.length)
   let text = `
-┌「 *XP Leaderboard Top ${len}* 」
-├ Kamu: *${usersExp.indexOf(m.sender) + 1}* dari *${usersExp.length}*
-│
-${sortedExp.slice(0, len).map(({ jid, exp }, i) => `├ ${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} *${exp} Exp*`).join`\n`}
-└────
-┌「 *Limit Leaderboard Top ${len}* 」
-├ Kamu: *${usersLim.indexOf(m.sender) + 1}* dari *${usersLim.length}*
-│
-${sortedLim.slice(0, len).map(({ jid, limit }, i) => `├ ${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} *${limit} Limit*`).join`\n`}
-└────
-┌「 *Level Leaderboard Top ${len}* 」
-├ Kamu: *${usersLevel.indexOf(m.sender) + 1}* dari *${usersLevel.length}*
-│
-${sortedLevel.slice(0, len).map(({ jid, level }, i) => `├ ${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} *Level ${level}*`).join`\n`}
-└────`.trim()
+*XP Leaderboard Top ${len}*
+You: *${usersExp.indexOf(m.sender) + 1}* from *${usersExp.length}*
+️
+${sortedExp.slice(0, len).map(({ jid, exp }, i) => `├ ${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} *${exp} Exp*`).join`\n` }
+️
+*Limit Leaderboard Top ${len}*
+You: *${usersLim.indexOf(m.sender) + 1}* from *${usersLim.length}*
+️
+${sortedLim.slice(0, len).map(({ jid, limit }, i) => `├ ${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} *${limit} Limit*`).join`\n` }
+️
+*Level Leaderboard Top ${len}*
+You: *${usersLevel.indexOf(m.sender) + 1}* from *${usersLevel.length}*
+️
+${sortedLevel.slice(0, len).map(({ jid, level }, i) => `├ ${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} *Level ${level}*`).join`\n` }
+`.trim()
   m.reply(text)
 }
-handler.help = ['leaderboard [jumlah user]', 'lb [jumlah user]']
+handler.help = ['leaderboard [number of users]', 'lb [number of users]']
 handler.tags = ['xp']
 handler.command = /^(leaderboard|lb)$/i
 
