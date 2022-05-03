@@ -1,8 +1,8 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, args }) => {
    response = args.join(' ')
-  if (!args) throw 'Masukkan Parameter'
-  m.reply('*Proses...*')
+  if (!args) throw 'Enter Parameter'
+  m.reply('*processing......⚙️*')
   let res = `https://api.zeks.xyz/api/epep?text=${response}&apikey=apivinz`
   conn.sendFile(m.chat, res, 'nama.jpg', `Nih Mhank`, m, false)
 }
