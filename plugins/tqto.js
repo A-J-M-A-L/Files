@@ -10,17 +10,15 @@ let handler = async (m, { command }) => {
 bear = "Source Code"
 ye = `@${m.sender.split`@`[0]}`
 let esce = `
-BIG THANKS TO
-Nurutomo
-https://github.com/Nurutomo
-Ariffb25
-https://github.com/ariffb25
-Letta-Sama
-https://github.com/Kannachann
-Fahri
-https://github.com/FahriAdison
-Ahmad
-https://github.com/Luigmntng`
+*BIG THANKS TO*
+NeeraJ-x0: 
+https://github.com/Neeraj-x0
+Toxic-Ajmal: 
+https://github.com/Ajmal-Achu
+D-3-V-1-L: 
+https://github.com/D-3-V-1-L
+Lord-Official: 
+https://github.com/Lord-official`
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
          hydratedTemplate: {
