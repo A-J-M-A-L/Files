@@ -2,20 +2,20 @@ let { MessageType } = require('@adiwajshing/baileys-md')
 let fetch = require('node-fetch')
 let handler = async (m, { conn, args, usedPrefix, DevMode }) => {
     try {
-        if (!args || !args[0] || args.length < 1) return m.reply(`[❗] Format salah\nContoh : ${usedPrefix}lirik sad!`)
-        let res = await fetch(global.API('bg', '/lirik', { 
+        if (!args || !args[0] || args.length < 1) return m.reply(`[❗] Incorrect format\nExample : ${usedPrefix}sad lyrics!`)
+        let res = await fetch(global.API('bg', '/lyrics', {
             title: args[0],
-            artist: args[1] || '' 
+            artist: args[1] || ''
         }))
         let json = await res.json()
         if (json.status !== true) throw json
         m.reply(`
-〘 *Lirik/Lyrics* 〙
+*Lyrics/Lyrics*
 _Song Name_ : *${args[0]}*
 Requested by : *${conn.getName(m.sender)}*
 \`\`\`${json.result}\`\`\`
 `.trim())
-    } catch (e) {
+    } catch(e) {
         m.reply('Error!')
         console.log(e)
         if (DevMode) {
@@ -27,7 +27,7 @@ Requested by : *${conn.getName(m.sender)}*
     }
 }
     
-handler.help = ['lirik', 'lyrics'].map(v => ' [title] [artist]')
+handler.help = ['lyrics', 'lyrics'].map(v => ' [title] [artist]')
 handler.tags = ['internet']
 handler.command = /^(l(irik|yrics))$/i
 
