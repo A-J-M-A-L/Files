@@ -1,10 +1,10 @@
 // NurNurz
-let handler = async (m, { conn, text }) => {
-   if (!text) throw `Masukan Text Untuk Bio Baru Bot`
+let handler = async(m, { conn, text }) => {
+   if (!text) throw `Enter Text For New Bio Bot`
      try {
         await conn.setStatus(text)
-        conn.reply(m.chat, 'Sukses Mengganti Bio Bot', m)
-     } catch (e) {
+        conn.reply(m.chat, 'Success in Changing Bio Bot', m)
+     } catch(e) {
        console.log(e)
        throw `Error`
      }
