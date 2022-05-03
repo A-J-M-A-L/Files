@@ -127,11 +127,89 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       break
     default:
       if (!/[01]/.test(command)) throw `
-┌〔 Daftar Opsi 〕${isOwner ? '\n├ antispam\n├ antitroli\n├ autoread\n├ backup\n├ grouponly\n├ jadibot\n├ nsfw\n├ public\n├ antilink\n├ mycontact' : ''}
-├ autolevelup
-├ antilink
-├ welcome
-└────
+"listMessage": {
+          "title": `List option: \n| welcome \n| delete \n| public \n| antilink \n| autolevelup \n| detect \n| document \n| whitelistmycontacts \n| restrict \n| nyimak \n| autoread \n| pconly \n| gconly \n| swonly \n| viewonce`.trim(),         
+          "description": "click your options and press send button",
+          "footerText": "𝚉𝙴𝚄𝚂_»𝙲𝙾𝙼𝙼𝚄𝙽𝙸𝚃𝚈",
+          "buttonText": "SWITCH ON/OFF",
+          "listType": "SINGLE_SELECT",
+          "sections": [
+            {
+              "rows": [
+                {
+                  "title": `Enable welcome`,
+                  "description": "Welcome Message Enable This Group",
+                  "rowId": "#enable welcome"     
+                }, {
+                  "title": `Enable Public`,
+                  "description": "Public Mod",
+                  "rowId": "#enable public"
+                 }, {
+                  "title": `Enable Antilink`,
+                  "description": "Anti Link Protection",
+                  "rowId": "#enable antilink"                
+                 }, {
+                  "title": `Enable Auto Levelup`,
+                  "description": "Automatically level up",
+                  "rowId": "#true autolevelup"                
+                 }, {
+                  "title": `Enable Group Only`,
+                  "description": "Group Only Mode",
+                  "rowId": "#enable grouponly"                
+                 }, {
+                  "title": `Enable AntiCall`,
+                  "description": "Blocks The Person Who Calls The Bot",
+                  "rowId": "#enable anticall"              
+                 }, {
+                  "title": `Enable BackUp`,
+                  "description": "Enables BackUp",
+                  "rowId": "#false document"                   
+                 }, {
+                  "title": `Enable My Contacts`,
+                  "description": "Enable White List Mycontacts",
+                  "rowId": "#enable mycontact"   
+                 }, {
+                  "title": `Enable Restrict`,
+                  "description": "Restrict Mod",
+                  "rowId": "#true restrict"                         
+                  }, {
+                  "title": `Disable Restrict`,
+                  "description": "Disable Restrict Mod",
+                  "rowId": "#false restrict"                         
+                  }, {
+                  "title": `Enable Listen`,
+                  "description": "Listen Mod",
+                  "rowId": "#true litsen"                         
+                  }, {
+                  "title": `Disable Litsen`,
+                  "description": "Disable Restrict Mod",
+                  "rowId": "#false litsen"                         
+                  }, {
+                  "title": `Enable Auto Read`,
+                  "description": "Automatic reading whatsapp messages",
+                  "rowId": "#true autoread"                         
+                  }, {
+                  "title": `Disable Auto Read`,
+                  "description": "Disable Automatic reading whatsapp messages",
+                  "rowId": "#false autoread"                         
+                  }, {
+                  "title": `Enable Viewonce`,
+                  "description": "Anti View once",
+                  "rowId": "#true viewonce"                    
+                  }, {
+                  "title": `Disable Viewonce`,
+                  "description": "Disable view once mod",
+                  "rowId": "#false viewonce"                                                   
+                }
+              ]
+            }
+          ], "contextInfo": {
+            "stanzaId": m.key.id,
+            "participant": m.sender,
+            "quotedMessage": m.message
+          }
+        }
+      }, {}), { waitForAck: true })
 contoh:
 ${usedPrefix}on welcome
 ${usedPrefix}off welcome
