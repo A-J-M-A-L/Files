@@ -225,122 +225,111 @@ let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(
       const template = generateWAMessageFromContent(m.key.remoteJid, proto.Message.fromObject({
         listMessage: {
             title: `${ucapan()}, ${name}`,
-            description: `┏━━━━〔 *${wm}* 〕━━━⬣
-┃⬡ Aktif selama ${uptime}
-┃⬡ ${Object.keys(global.db.data.users).length} Pengguna
-┃⬡ Mode : ${global.opts['self'] ? 'Self' : 'publik'}
-┃⬡ ${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length} Chat Terbanned
-┃⬡ ${Object.entries(global.db.data.users).filter(user => user[1].banned).length} Pengguna Terbanned
-┃⬡ スパムしないでください
-┗━━━━━━━━━━━━━━━⬣`,
+            description: `┏━━〔 𝙎 𝙏 𝘼 𝙏 𝙐 𝙎 〕━㉿
+⬡ Active during ${uptime}
+⬡ Total Users : ${Object.keys(global.db.data.users).length}
+⬡ Mode : ${global.opts['self'] ? 'Self' : 'public'}
+⬡ ${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length} Chat Banned
+⬡ ${Object.entries(global.db.data.users).filter(user => user[1].banned).length} Banned User
+⬡ Owner : Ajmal
+┗━━━━━━━━━━━━━㉿
+  ♡ ㅤ    ❍ㅤ      ⎙ㅤ      ⌲`,
             buttonText: 'LIST MENU',
             listType: 1,
-            footerText: "𝚂𝙸𝙻𝙰𝙷𝙺𝙰𝙽 𝙿𝙸𝙻𝙸𝙷 𝙼𝙴𝙽𝚄 𝙳𝙸 𝙱𝙰𝚆𝙰𝙷",
+            footerText: "sᴇʟᴇᴄᴛ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ᴛᴏ ᴋɴᴏᴡ ᴄᴏᴍᴍᴀɴᴅs",
             mtype: 'listMessage',
             sections: [
               {
                 "rows": [{
-                  "title": `OWNER BOT`,
-                  "description": "Nomor Pemilik Bot Chat P/Meminta Save Tidak Akan Di Respon",
+                  "title": `BOT OWNER`,
+                  "description": "",
                   "rowId": `.owner`
                 },{
-                  "title": "INFO BOT",
-                  "description": "Menampilkan Menu Info",
+                  "title": "BOT INFO",
+                  "description": "",
                   "rowId": `${_p}? info`
                 }],
-                "title": "INFORMASI BOT"
+                "title": "COMMANDS"
               }, {
                 "rows": [{
-                  "title": `☰ SEMUA PERINTAH`,
-                  "description": "Menampilkan Menu All",
+                  "title": `☰ ALL MENU`,
+                  "description": "",
                   "rowId": '.? all'
                   }, {
                   "title": "☰ ABSEN & VOTING",
-                  "description": "Menampilkan Menu Absen",
+                  "description": "",
                   "rowId": `${_p}? absen`
                 }, {
                   "title": "☰ ANIME MENU",
-                  "description": "Menampilkan Menu Anime",
+                  "description": "",
                   "rowId": `${_p}? anime`
                 }, {
                   "title": "☰ STICKER & CONVERTER",
-                  "description": "Menampilkan Menu Sticker",
+                  "description": "",
                   "rowId": `${_p}? sticker`
                 }, {
                   "title": "☰ DOWNLOADER MENU",
-                  "description": "Menampilkan Menu Downloader",
+                  "description": "",
                   "rowId": `${_p}? downloader`
                 }, {
                   "title": "☰ EXP & LIMIT",
-                  "description": "Menampilkan Menu Exp",
+                  "description": "",
                   "rowId": `${_p}? xp`
                 }, {
                   "title": "☰ FUN MENU",
-                  "description": "Menampilkan Menu Fun",
+                  "description": "",
                   "rowId": `${_p}? fun`
                 }, {
                   "title": "☰ GAME MENU",
-                  "description": "Menampilkan Menu Game",
+                  "description": "",
                   "rowId": `${_p}? game`
                 }, {
                   "title": "☰ GITHUB MENU",
-                  "description": "Menampilkan Menu Github",
+                  "description": "",
                   "rowId": `${_p}? github`
                 }, {
                   "title": "☰ GROUP MENU",
-                  "description": "Menampilkan Menu Group",
+                  "description": "",
                   "rowId": `${_p}? group`
                 }, {
                   "title": "☰ IMAGE MENU",
-                  "description": "Menampilkan Menu Image",
+                  "description": "",
                   "rowId": `${_p}? image`
                 }, {
                   "title": "☰ INTERNET MENU",
-                  "description": "Menampilkan Menu Internet",
+                  "description": "",
                   "rowId": `${_p}? internet`
                 }, {
-                  "title": "☰ ISLAM MENU",
-                  "description": "Menampilkan Menu Islam",
-                  "rowId": `${_p}? islam`
-                }, {
-                  "title": "☰ KERANG AJAIB",
-                  "description": "Menampilkan Menu Kerang",
-                  "rowId": `${_p}? kerang`
-                }, {
                   "title": "☰ MAKER MENU",
-                  "description": "Menampilkan Menu Maker",
+                  "description": "",
                   "rowId": `${_p}? maker`
                 }, {
                   "title": "☰ OWNER MENU",
-                  "description": "Menampilkan Menu Owner",
+                  "description": "",
                   "rowId": `${_p}? owner`
                 }, {
                   "title": "☰ PENGUBAH SUARA",
-                  "description": "Menampilkan Menu Voice Changer",
+                  "description": "",
                   "rowId": `${_p}? suara`
                 }, {
                   "title": "☰ PREMIUM MENU",
-                  "description": "Menampilkan Menu Premium",
+                  "description": "",
                   "rowId": `${_p}? premium`
                 }, {
                   "title": "☰ QUOTES MENU",
-                  "description": "Menampilkan Menu Quotes",
+                  "description": "",
                   "rowId": `${_p}? quotes`
                 }, {
-                  "title": "☰ RPG MENU",
-                  "description": "Menampilkan Menu Rpg",
-                  "rowId": `${_p}? rpg`
-                }, {
                   "title": "☰ STALKER MENU",
-                  "description": "Menampilkan Menu Stalker",
+                  "description": "",
                   "rowId": `${_p}? stalk`
                 }, {
                   "title": "☰ SHORT LINK",
-                  "description": "Menampilkan Menu Short Link",
+                  "description": "",
                   "rowId": `${_p}? shortlink`
                 }, {
                   "title": "☰ TOOLS MENU",
-                  "description": "Menampilkan Menu Tools",
+                  "description": "",
                   "rowId": `${_p}? tools`
                 }
                   ],
@@ -416,15 +405,15 @@ let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(
            hydratedFooterText: wm,
            hydratedButtons: [{
             urlButton: {
-               displayText: 'MY WEBSITE',
-               url: 'https://Hyzerr.github.io/'
+               displayText: 'YouTube♻️,
+               url: youtube
              }
 
            },
              {
-              quickReplyButton: {
-               displayText: 'Owner',
-               id: '.owner',
+              urlButton: {
+               displayText: 'Script✅',
+               url: 'https://github.com/Ajmal-Achu/Wizard-MD'
              }
 
            },
@@ -432,6 +421,11 @@ let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(
              quickReplyButton: {
                displayText: 'Profile',
                id: '.profile',
+             },
+              {
+             quickReplyButton: {
+               displayText: 'Back To Menu➡️',
+               id: '.menu',
              }
            }]
          }
@@ -444,7 +438,7 @@ let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(
          { messageId: template.key.id }
      )
 } catch (e) {
-    conn.reply(m.chat, 'Maaf, menu sedang error', m)
+    conn.reply(m.chat, 'Something Went Wrong Please Try Again After Sometime', m)
     throw e
   }
 }
@@ -476,18 +470,18 @@ function clockString(ms) {
 }
 function ucapan() {
   const time = moment.tz('Asia/Jakarta').format('HH')
-  res = "Selamat DiniHari"
+  res = "Good Day"
   if (time >= 4) {
-    res = "Selamat Pagi"
+    res = "Good Morning"
   }
   if (time > 10) {
-    res = "Selamat Siang"
+    res = "Good Afternoon"
   }
   if (time >= 15) {
-    res = "Selamat Sore"
+    res = "Good Evening"
   }
   if (time >= 18) {
-    res = "Selamat Malam"
+    res = "Good Night"
   }
   return res
 }
