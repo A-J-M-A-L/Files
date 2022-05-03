@@ -1,5 +1,5 @@
 let fetch = require('node-fetch')
-let handler = async(m, { text, usedPrefix, command }) => {
+let handler = async (m, { text, usedPrefix, command }) => {
     if (!text) throw `uhm.. what are you looking for?\n\nexample:\n${usedPrefix + command} mabar`
     let res = await carigroup(text, 'name')
     if (!res.length) throw 'Group not found!'
