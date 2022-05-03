@@ -1,26 +1,26 @@
 let { groupSettingUpdate } = require('@adiwajshing/baileys-md')
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-	let isClose = {
-		'open': 'not_announcement',
-		'buka': 'not_announcement',
-		'on': 'not_announcement',
-		'1': 'not_announcement',
-		'close': 'announcement',
-		'tutup': 'announcement',
-		'off': 'announcement',
-		'0': 'announcement',
-	}[(args[0] || '')]
-	if (isClose === undefined) {
-		await conn.send2But(m.chat, `
-contoh penggunaan:
-*${usedPrefix + command} tutup*
-*${usedPrefix + command} buka*
-	`.trim(), 'setting grup', 'Buka', '.grup 1', 'Tutup', '.grup 0')
-		throw false
-	}
-	await conn.groupSettingUpdate(m.chat, isClose)
+let isClose = {
+'open': 'not_announcement',
+'open': 'not_announcement',
+'on': 'not_announcement',
+'1': 'not_announcement',
+'close': 'announcement',
+'close': 'announcement',
+'off': 'announcement',
+'0': 'announcement',
+}[(args[0] || '')]
+if (isClose === undefined) {
+await conn.send2But(m.chat, `
+usage example:
+*${usedPrefix + command} close*
+*${usedPrefix + command} open*
+`.trim(), 'group settings', 'Open', '.group 1', 'Close', '.group 0')
+throw false
 }
-handler.help = ['grup <buka/tutup>']
+await conn.groupSettingUpdate(m.chat, isClose)
+}
+handler.help = ['group <open/close>']
 handler.tags = ['group']
 handler.command = /^(gro?up)$/i
 handler.owner = false
