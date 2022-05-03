@@ -3,7 +3,7 @@ let _gis = require('g-i-s')
 let gis = promisify(_gis)
 
 let handler  = async (m, { conn, args, text }) => {
-  if (!text) return m.reply('Cari apa?')
+  if (!text) return m.reply('What are you looking for?')
   let results = await gis(text) || []
   let { url, width, height } = pickRandom(results) || {}
   if (!url) return m.reply('Not Found')
