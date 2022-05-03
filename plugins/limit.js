@@ -9,11 +9,11 @@ let handler = async (m) => {
   },
   message: {
   documentMessage: {
-  title: wm, 
+  title: wm,
                             }
                           }
                         }
-conn.sendBut(m.chat, `${global.db.data.users[who].limit} Limit Tersisaಥ_ಥ`, wm, 'BELI', '.buy', fdoc)
+conn.sendBut(m.chat, `${global.db.data.users[who].limit} Limit Remainingಥ_ಥ`, wm, 'BUY', '.buy', fdoc)
 }
 handler.help = ['limit [@user]']
 handler.tags = ['xp']
