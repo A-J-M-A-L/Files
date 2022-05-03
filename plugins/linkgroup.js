@@ -7,7 +7,7 @@ let handler = async (m, { conn, args }) => {
   if (!groupMetadata) throw 'groupMetadata is undefined'
   if (!'participants' in groupMetadata) throw 'participants is not defined'
   let me = groupMetadata.participants.find(user => user.jid === conn.user.jid)
-  m.reply('*Link Group ini*\n\nhttps://chat.whatsapp.com/' + await conn.groupInviteCode(group))
+  m.reply('*HERE IS THE GROUP LINK*\n\nhttps://chat.whatsapp.com/' + await conn.groupInviteCode(group))
 }
 handler.help = ['linkgroup']
 handler.tags = ['group']
