@@ -1,4 +1,4 @@
-global.owner = ['6283182270674'] // Put your number here
+global.owner = ['918590508376'] // Put your number here
 global.mods = [] // Want some help?
 global.prems = [] // Premium user has unlimited limit
 global.APIs = { // API Prefix
@@ -41,18 +41,19 @@ global.APIKeys = { // APIKey Here
 //cari apikey sendiri ya gaes yak
 
 // Sticker WM
-global.stiker_wait = 'Stiker sedang dibuat'
-global.packname = 'stickerby'
-global.author = `𝙿𝚊𝚝𝚛𝚒𝚌𝚔 𝙱𝚘𝚝`
-global.wm = '𝙿𝚊𝚝𝚛𝚒𝚌𝚔 𝙱𝚘𝚝'
+global.stiker_wait = 'ᴡᴀɪᴛ ᴀ ᴍɪɴᴜᴛᴇ'
+global.packname = 'sᴛɪᴄᴋᴇʀ ʙʏ'
+global.author = `ᴡɪᴢᴀʀᴅ ᴍᴅ`
+global.wm = 'ᴡɪᴢᴀʀᴅ ᴍᴅ'
 global.watermark = wm
-global.media = 'https://telegra.ph/file/72168c6f1aaa90315c369.jpg'
-global.instagram = 'https://instagram.com/hyzer-stfu'
+global.media = 'https://telegra.ph/file/7d9d70dddf6cdef3dd6b3.jpg'
+global.instagram = 'https://instagram.com/toxic_ajmal_'
+global.youtube = 'https://youtube.com/channel/UCLegt7MKqNBxJjIkE_QNPdA'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=crafts-logo&doScale=true&scaleWidth=500&scaleHeight=500&fontsize=100&fillTextType=0&backgroundColor=%23401620&text='
-global.wait = '_*tunggu sedang di proses...*_'
+global.wait = '_*ᴡᴀɪᴛ ɪᴛ ɪs ʙᴇɪɴɢ ᴘʀᴏᴄᴇssɪɴɢ...*_'
 global.eror = '_*Server Error*_'
-global.benar = 'Benar ✅\n'
-global.salah = 'Salah ❌\n'
+global.benar = 'Right ✅\n'
+global.salah = 'Wrong ❌\n'
 
 global.multiplier = 69 // The higher, The harder levelup
 
