@@ -5,32 +5,34 @@ let handler = async (m) => {
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
     else who = m.sender
     let user = global.db.data.users[who]
-let anu = `*─────� DONATE 」 ───*
+let so-and-so = `*â”€â”€â”€â”€â”€Œ DONATE € â”€â”€â”€*
 
-Hai 👋
-Kalian bisa mendukung saya agar bot ini tetap up to date dengan:
-┌〔 Donasi • Emoney 〕
-├📌Indoosat: 085643354073
-└────
-Berapapun donasi kalian akan sangat berarti 👍
+Hi ‘‹
+You guys can support me to keep this bot up to date.
+But currently we are not accepting any donations.
+So If you want support me you can support by following my social media's.
 
-Arigatou!
+Thanks for your interest ☺️
 
-Contact person Owner:
-wa.me/6285643354073 (Owner)
-
-*donasi via follow ig juga boleh*`
+*Have A Good Day😄*`
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
          hydratedTemplate: {
            hydratedContentText: anu,
-           locationMessage: { 
-           jpegThumbnail: fs.readFileSync('./media/donasi.jpg') }, 
+           locationMessage: {
+           jpegThumbnail: fs.readFileSync('./media/donation.jpg') },
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: '📍instagram',
+               displayText: 'ðŸ“ instagram',
                url: instagram
+             }
+
+           },
+               {
+             urlButton: {
+               displayText: 'ðŸ“ YouTube',
+               url: youtube
              }
 
            },
@@ -51,8 +53,8 @@ wa.me/6285643354073 (Owner)
          { messageId: template.key.id }
      )
 }
-handler.help = ['donasi', 'donate']
+handler.help = ['donate', 'donate']
 handler.tags = ['xp']
-handler.command = /^(donasi|donate)$/i
+handler.command = /^(donate|donate)$/i
 
 module.exports = handler
